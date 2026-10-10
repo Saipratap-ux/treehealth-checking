@@ -1,0 +1,10 @@
+{
+  "name": "SC Plant Health AI",
+  "description": "AI-powered plant disease diagnosis, nutrient deficiency analysis, watering schedules, and smart care reminders for farmers and gardeners.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

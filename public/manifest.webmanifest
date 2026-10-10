@@ -1,0 +1,45 @@
+{
+  "id": "/",
+  "name": "TreeHealthAI",
+  "short_name": "TreeHealthAI",
+  "description": "TreeHealthAI — Healthy Trees • Greener Tomorrow. Created by Kinjal Bariha.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#f0fdf4",
+  "theme_color": "#15803d",
+  "categories": ["agriculture", "education", "utilities", "lifestyle"],
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Scan Plant",
+      "url": "/?tab=scan",
+      "description": "Scan a sick plant or leaf immediately"
+    },
+    {
+      "name": "Care Planner",
+      "url": "/?tab=planner",
+      "description": "View watering and fertilizer schedules"
+    }
+  ]
+}

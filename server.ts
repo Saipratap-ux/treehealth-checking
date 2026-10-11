@@ -32,7 +32,7 @@ if (process.env.GEMINI_API_KEY) {
 app.get('/api/health', (req, res) => {
   res.json({
     status: 'ok',
-    app: 'SC Plant Health AI',
+    app: 'TreeHealthAI',
     version: '1.0.0',
     hasGeminiKey: Boolean(process.env.GEMINI_API_KEY),
     timestamp: new Date().toISOString(),
@@ -474,6 +474,11 @@ app.post('/api/soil-calculator', (req, res) => {
   }
 });
 
+// Catch-all for undefined API routes so they return JSON 404 rather than index.html
+app.all('/api/*', (req, res) => {
+  res.status(404).json({ error: 'API endpoint not found', path: req.path });
+});
+
 // Setup Vite middleware in dev or static files in production
 async function startServer() {
   if (process.env.NODE_ENV !== 'production') {
@@ -491,7 +496,7 @@ async function startServer() {
   }
 
   app.listen(PORT, '0.0.0.0', () => {
-    console.log(`🌿 SC Plant Health AI Server running at http://0.0.0.0:${PORT}`);
+    console.log(`🌿 TreeHealthAI Server running at http://0.0.0.0:${PORT}`);
   });
 }
 
